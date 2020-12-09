@@ -40,10 +40,16 @@
   }
 */
 
+if (process.env.NODE_ENV !== 'production') {
+  // eslint-disable-next-line global-require
+  require('dotenv').config({ path: './config.env' });
+  // console.log(process.env.NEWRELIC_KEY);
+}
+
 module.exports = {
   service1: {
     api: '/carousel-module/photos/:id',
-    url: 'http://localhost:3003',
+    url: process.env.SERVICE_URL,
     bundle: 'bundle.js',
   },
   service2: {
