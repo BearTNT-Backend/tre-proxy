@@ -20,7 +20,7 @@ app.get('/listing/*', (req, res) => {
 });
 
 app.get('/loaderio-*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, `../${process.env.LOADERIO_FILENAME}`));
+  res.sendFile(path.resolve(__dirname, `../${process.env.LOADERIO_FILENAME}.txt`));
 });
 
 module.exports = app;
