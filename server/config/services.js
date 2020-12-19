@@ -50,7 +50,7 @@ module.exports = {
   service1: {
     api: '/carousel-module/photos/:id',
     url: process.env.SERVICE_URL,
-    bundle: 'bundle.js',
+    bundle: 'bundle.js.gz',
   },
   service2: {
     api: ['/reservation/calendar', '/reservation/reservationCost'],
